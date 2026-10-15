@@ -1,5 +1,6 @@
 {
-  "notice_id": "PPDN-68df2ebff48ff7a344d1ac06321f8706d506f1798921350f32831ef3708d1625",
+  "notice_id": "PPDN-f24684e9f78cd855e8d9b19bb21f6d7d59a32780a3a5e7e112f2d96367bae05b",
+  "from": "[ORG]AIOC-PPD",
   "release": {
     "release_id": "PPDREL-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "version": "1",
@@ -15,5 +16,6 @@
   "supersedes": null,
   "answers": [],
   "to": "[ORG]AIOC-DI",
-  "sent_at": "2026-10-16T10:00:00Z"
+  "sent_at": "2026-10-16T10:00:00Z",
+  "rests_on": []
 }

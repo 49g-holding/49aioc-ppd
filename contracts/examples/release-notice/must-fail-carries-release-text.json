@@ -1,13 +1,10 @@
 {
-  "notice_id": "PPDN-f1a3e35b5384e203373d312bbed64506a9d391ef77ce37aaa765be493495b07b",
+  "notice_id": "PPDN-ecc0a0ce7b9c738bb7150b8c912db1a0fa4a9ad54ce4984a8790e8d0492bef06",
+  "from": "[ORG]AIOC-PPD",
   "release": {
     "release_id": "PPDREL-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "version": "1",
     "manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
-  },
-  "tom_release": {
-    "release_id": "TOMR-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
-    "manifest_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
   },
   "filed_ref": {
     "source_id": "SRC-210",
@@ -23,6 +20,12 @@
   "parts": [
     {
       "part": "position register"
+    }
+  ],
+  "rests_on": [
+    {
+      "release_id": "TOMR-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "manifest_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
     }
   ]
 }

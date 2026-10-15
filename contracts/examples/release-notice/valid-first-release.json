@@ -1,13 +1,10 @@
 {
-  "notice_id": "PPDN-b6551d69ab8ca7e8dd0651e2b972aa795990d3349fe0e5569f1898c4ef0c106a",
+  "notice_id": "PPDN-f6c5907a8c506eb876bba5e46cb6d4cfbc08119c146eee4b8d73408f05d1163f",
+  "from": "[ORG]AIOC-PPD",
   "release": {
     "release_id": "PPDREL-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "version": "1",
     "manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
-  },
-  "tom_release": {
-    "release_id": "TOMR-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
-    "manifest_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
   },
   "filed_ref": {
     "source_id": "SRC-210",
@@ -19,5 +16,11 @@
   "supersedes": null,
   "answers": [],
   "to": "[ORG]AIOC-DI",
-  "sent_at": "2026-10-16T10:00:00Z"
+  "sent_at": "2026-10-16T10:00:00Z",
+  "rests_on": [
+    {
+      "release_id": "TOMR-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "manifest_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    }
+  ]
 }

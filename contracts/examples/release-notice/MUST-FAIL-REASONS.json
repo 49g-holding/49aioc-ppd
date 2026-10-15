@@ -3,13 +3,13 @@
     "path": "",
     "keyword": "additionalProperties"
   },
-  "must-fail-no-tom-release.json": {
-    "path": "",
-    "keyword": "required"
-  },
   "must-fail-not-decided.json": {
     "path": "/final_status",
     "keyword": "enum"
+  },
+  "must-fail-rests-on-nothing.json": {
+    "path": "/rests_on",
+    "keyword": "minItems"
   },
   "must-fail-short-release-id.json": {
     "path": "/release/release_id",

@@ -13,7 +13,7 @@
     "path": "contracts/release-notice.schema.json",
     "id": "urn:49gaion:library:tom:release-notice:v0.5",
     "blueprint_version": "v0.5.0",
-    "sha256": "a748993735f2c7b0e204a5712f457b1a0a60be37c5603152374a5ace741422fe",
+    "sha256": "21305a8869714d00fa49f9d757ea8547c5afcdb7702f741757f0204e4bdad2ad",
     "read_on": "2026-10-16",
     "note": "The notice this AIOC receives from [ORG]AIOC-TOM (TOM blueprint v0.5.0, §5.9 step 8a). Read by hash; a new version is taken into use by a tested change of this pin."
   }
