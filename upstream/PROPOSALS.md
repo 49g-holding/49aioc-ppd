@@ -30,4 +30,11 @@
 - **Reason and evidence.** The same five return kinds already run between TOM and the stage after it; each later stage needs the same.
 - **Parts and tests affected.** A Library contract and its examples; the Library cards README.
 
+## 5. To 49GAION: the Library card of Process and Position Design
+
+- **Current text.** `library/cards/process-and-position-design.part-card.json` lists the PPD Release parts as merged on 15 October 2026.
+- **Proposed text.** Add to the outputs: the controls catalogue and the segregation-of-duties check; competence profiles; the objectives cascade; the review calendar; structure scenarios; the peak-load check and value-stream times; each process's re-approval date. Add to the Library test the cases that do not depend on this AIOC's own parts (here, cases 78 to 82, 84, 88 and 93, generalised).
+- **Reason and evidence.** `decisions/DR-0002`: the study of fifteen rival products and the launch-readiness review.
+- **Parts and tests affected.** The Library card; Protocol §17; TEST-PROCESS-AND-POSITION-DESIGN (new cases).
+
 *Powered by 49GAION*
