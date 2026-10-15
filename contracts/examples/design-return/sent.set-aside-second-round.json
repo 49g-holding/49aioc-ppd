@@ -1,0 +1,32 @@
+{
+  "return_id": "PPDR-3",
+  "run_id": "RUN-0003",
+  "release": {
+    "release_id": "TOMR-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "manifest_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "kind": "assumption invalid",
+  "elements": [
+    {
+      "part": "hand-offs register",
+      "element_id": "HO-4"
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "HO-4"
+    }
+  ],
+  "held_here": [
+    "PRC-9"
+  ],
+  "round": 2,
+  "filed_ref": {
+    "source_id": "SRC-203",
+    "version": "2",
+    "sha256": "6666666666666666666666666666666666666666666666666666666666666666"
+  },
+  "status": "set aside by decision",
+  "answered_by": "DEC-77",
+  "carried_forward_on": "known defect"
+}

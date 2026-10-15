@@ -1,0 +1,24 @@
+{
+  "return_id": "PPDR-1",
+  "run_id": "RUN-0003",
+  "release": {
+    "release_id": "TOMR-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "manifest_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "kind": "accepted",
+  "elements": [
+    {
+      "part": "whole release"
+    }
+  ],
+  "evidence": [],
+  "held_here": [],
+  "round": 1,
+  "filed_ref": {
+    "source_id": "SRC-201",
+    "version": "1",
+    "sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+  },
+  "status": "answered by release",
+  "answered_by": "TOMR-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+}

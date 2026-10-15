@@ -15,7 +15,10 @@ allowed_actions:
 - send needs requests and Missing Reports to [ORG]AIOC-SL
 - generate job descriptions, registers, charts and workload through the code steps
 - file a release whose elements are decided
-- send release notices
+- send release notices to [ORG]AIOC-DI after filing
+- admit or refuse a return from [ORG]AIOC-DI by the pinned contract and record it
+- generate return briefs through the code step and send their rows to [ORG]AIOC-SL
+- send return answers to [ORG]AIOC-DI
 ask_first_actions:
 - a second run in parallel
 - a budget above the cap

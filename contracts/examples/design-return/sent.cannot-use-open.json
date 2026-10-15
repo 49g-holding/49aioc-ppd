@@ -1,0 +1,36 @@
+{
+  "return_id": "PPDR-2",
+  "run_id": "RUN-0003",
+  "release": {
+    "release_id": "TOMR-cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "manifest_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "kind": "cannot use",
+  "missing": "the decider of a customer refund above the standing limit",
+  "elements": [
+    {
+      "part": "design ledger",
+      "element_id": "DD-12"
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "DD-12"
+    },
+    {
+      "ref": "ATOM-41",
+      "span_sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+    }
+  ],
+  "held_here": [
+    "PRC-7",
+    "STP-31"
+  ],
+  "round": 1,
+  "filed_ref": {
+    "source_id": "SRC-202",
+    "version": "1",
+    "sha256": "5555555555555555555555555555555555555555555555555555555555555555"
+  },
+  "status": "open"
+}

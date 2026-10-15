@@ -1,0 +1,22 @@
+{
+  "must-fail-carries-release-text.json": {
+    "path": "",
+    "keyword": "additionalProperties"
+  },
+  "must-fail-no-tom-release.json": {
+    "path": "",
+    "keyword": "required"
+  },
+  "must-fail-not-decided.json": {
+    "path": "/final_status",
+    "keyword": "enum"
+  },
+  "must-fail-short-release-id.json": {
+    "path": "/release/release_id",
+    "keyword": "pattern"
+  },
+  "must-fail-wrong-stage.json": {
+    "path": "/to",
+    "keyword": "const"
+  }
+}
