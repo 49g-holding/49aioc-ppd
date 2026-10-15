@@ -7,5 +7,6 @@ One `DR-####` file per decided subject, numbered in order. A record file never c
 | Record | Date | Subject | Status |
 |---|---|---|---|
 | [`DR-0001`](DR-0001-ppd-separate-aioc-linked-to-tom.md) | 2026-10-15 | Process and Position Design: a separate AIOC, linked directly to the Target Operating Model | in force |
+| [`DR-0002`](DR-0002-additions-from-rival-products-and-launch-review.md) | 2026-10-15 | Additions from the study of rival products and the launch-readiness review | in force |
 
 *Powered by 49GAION*
