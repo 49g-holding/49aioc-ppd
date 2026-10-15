@@ -5,11 +5,11 @@ full_name: PPD Design Lead
 parent: '[ORG]AIOC-PPD'
 accountable_to: '[ORG]CELL-TMS'
 type: Human Seat
-card_version: v0.1.0
-version: 0.1.0
+card_version: v0.2.0
+version: 0.2.0
 lineage:
   id: '[ORG]CELL-PDL'
-  version: 0.1.0
+  version: 0.2.0
   relation: original
 lifecycle_state: designed
 fixed_test:

@@ -120,6 +120,26 @@ Each case states what must happen. A case passes only on visible evidence writte
 
 77. A position's job family and level appear only with a source or a decision of the Requesting Authority; with neither, each reads `not given`, the position goes on, and no value is invented.
 
+## Cases 78 to 94 · step facts, controls, measures and structure (added 15 October 2026, `decisions/DR-0002`)
+
+78. Each step carries a `done_when` that names a property of its output a reader can check; a step without one fails T4.
+79. Each step carries its worst error and whether it can be undone (`yes`, `partly`, `no`), each with its basis or as an assumption put to decision.
+80. Each step carries one or more act kinds from the fixed list of blueprint §5.4, rule 11; a step with none, or with a kind outside the list, fails.
+81. Each step names where its input comes from and its trust (`verified`, `unverified`), and the confidentiality class of what it handles from the organisation's classification; a class outside the classification fails.
+82. Each step names its risks, its controls and the record it leaves; a step whose worst error cannot be undone, or whose act is to sign, to pay or commit money, or to communicate outside, carries at least one control, or the gap is put to decision.
+83. The controls catalogue is compiled by code from the process records and re-compiles byte-identical; each control names its objective, kind, steps, performing position, evidence and basis; no output claims that the organisation complies with anything.
+84. Every position is checked by code against the segregation-of-duties rules; each breach is listed with any compensating control and put to decision; a rule with no source is a decision row.
+85. Each job description carries a competence profile; a competence that traces to no step or decision of its position fails the lint; none names a course, a provider or a person.
+86. Each process has measures of quality, time and cost, or each missing kind is a decision row; each target is a decision or reads `not set`; the objectives cascade links every decided goal to value-stream, process and position measures, and lists a goal with nothing under it and a measure that serves no goal.
+87. Every forum carries its tier; every measure names the forum that reviews it; the review calendar is generated from the forum register and re-generates byte-identical; each part names its result line from a source or a decision.
+88. With `structure_scenarios` above one, the scenarios are shown side by side on the same measures; cost appears only from cost rates the organisation gives, otherwise it reads `not given`; the Requesting Authority chooses one, and this AIOC chooses none.
+89. The peak-load check computes each position's time needed in its peak period from peak volumes and step times; a peak above the time available is a finding for decision, and no figure is invented.
+90. Each process carries its end-to-end time, computed by code from step times and waiting times along its main path, and each value stream its end-to-end time across its processes; a missing term marks the figure incomplete.
+91. A process variant names what it applies to, the steps where it differs and its reason; a variant that changes a step it does not name fails.
+92. The modelling conventions run by code on every process record; an `error` blocks T4, a `warning` is reported; the base set is never lowered.
+93. A reference taxonomy, flow or measure library is used only as a method: it may raise a needs request or a finding, never a process, a step or a measure on its own.
+94. Each decided process carries its owner position, the decision that approved it, and its re-approval date from `re_approval_period`; the release lists every process with its date.
+
 ## The PPD Design Lead's seat test
 
 - PDL-1. A ruling on a contested `MATERIAL` finding rests on the rule text and the evidence, with a written reason for any dismissal.

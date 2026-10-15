@@ -5,11 +5,11 @@ full_name: PPD Release Reader
 parent: '[ORG]POD-PRI'
 accountable_to: '[ORG]CELL-PDL'
 type: AI Agent
-card_version: v0.1.0
-version: 0.1.0
+card_version: v0.2.0
+version: 0.2.0
 lineage:
   id: '[ORG]CELL-PRR'
-  version: 0.1.0
+  version: 0.2.0
   relation: original
 lifecycle_state: designed
 fixed_test:
