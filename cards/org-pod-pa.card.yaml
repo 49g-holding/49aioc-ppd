@@ -5,11 +5,11 @@ full_name: PPD Architecture
 parent: '[ORG]AIOC-PPD'
 accountable_to: '[ORG]CELL-PDL'
 type: AI Pod
-card_version: v0.2.0
-version: 0.2.0
+card_version: v0.3.0
+version: 0.3.0
 lineage:
   id: '[ORG]POD-PA'
-  version: 0.2.0
+  version: 0.3.0
   relation: original
 lifecycle_state: designed
 fixed_test:
