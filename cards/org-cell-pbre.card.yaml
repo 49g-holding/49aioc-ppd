@@ -5,11 +5,11 @@ full_name: PPD Blind Reviewer E
 parent: '[ORG]POD-PR'
 accountable_to: '[ORG]CELL-PDL'
 type: AI Agent
-card_version: v0.2.0
-version: 0.2.0
+card_version: v0.3.0
+version: 0.3.0
 lineage:
   id: '[ORG]CELL-PBRE'
-  version: 0.2.0
+  version: 0.3.0
   relation: original
 lifecycle_state: designed
 fixed_test:

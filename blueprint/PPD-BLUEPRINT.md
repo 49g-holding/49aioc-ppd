@@ -7,7 +7,7 @@ blueprint:
   organisation: "<organisation>"          # filled in each organisation's own copy
   type: "specialised"
   org_aion: "[ORG]AION"
-  blueprint_version: "v0.2.0"
+  blueprint_version: "v0.3.0"
   status: "draft"
   template:
     name: "49GAION AIOC Blueprint Template"
@@ -25,7 +25,7 @@ blueprint:
     functional: ["Release Intake and Returns", "Needs Requests", "Process Architecture", "Process Writing", "Position Shaping", "Structure", "Workload", "Operational Walkthrough", "Independent Review", "Decision Package and Release"]
 ```
 
-# Blueprint · `[ORG]AIOC-PPD` · Process and Position Design · `v0.2.0`
+# Blueprint · `[ORG]AIOC-PPD` · Process and Position Design · `v0.3.0`
 
 **Draft, 15 October 2026.** Written by `[ORG]AIOC-OCO` on the directions recorded in `decisions/DR-0001`. This is the first blueprint of Process and Position Design, written for any organisation as the mother text of the Library part 49GAION Process and Position Design (Protocol §17, proposed). Every rule rests on a 49GAION text, on the blueprint of `[ORG]AIOC-TOM` (cited by section and version), or is new here and marked **New**. Nothing here has run. Every fixed test reads `NOT_RUN`.
 
@@ -47,7 +47,7 @@ blueprint:
 > 4. Critical processes: choose the processes that cross parts, and design them first.
 > 5. Write each process: purpose, trigger, steps in role lanes, what goes in and out of each step, the decision at each step and who decides it, exceptions and escalation, measures, volumes and step times. Each step also says when it is done, its worst error and whether it can be undone, what kind of act it is, where its input comes from and how far it is trusted, how confidential it is, and its risk, control and record.
 > 6. Shape the positions: group the steps and decisions of each role into positions, and generate each job description from what the position holds. No job description is written by hand.
-> 7. Structure: reporting lines, spans and layers, standing forums with charters, and the crosswalk from the organisation as it is today.
+> 7. Structure: group the positions into units (teams, sections, departments), each with its head position and a generated charter; reporting lines, spans and layers, standing forums with charters, and the crosswalk from the organisation as it is today.
 > 8. Workload: the work each position carries, from the volumes and step times of its processes.
 > 9. Walk: test the design against realistic situations.
 > 10. Decide and release: the organisation decides each element; the release is frozen, filed in Source Lifecycle, and handed to the next stage.
@@ -61,6 +61,7 @@ blueprint:
 > - the controls catalogue and the segregation-of-duties check;
 > - the position register, with a job description and a competence profile for every position;
 > - the objectives cascade, from the decided goals down to each position's measures;
+> - the unit register, with a generated charter for each unit;
 > - organisation charts, standing forums with their charters and tiers, and the review calendar;
 > - structure scenarios side by side, when the organisation asks for them;
 > - the workload of each position, its peak-load check, and the end-to-end time of each process and value stream;
@@ -70,7 +71,7 @@ blueprint:
 >
 > **Who decides.** The organisation's Requesting Authority decides each element: accept, correct or reject. Silence decides nothing. PPD designs positions only (Standard §1.1, item 9). It makes no choice of what fills a position; that belongs to a later stage.
 
-**Where this blueprint stands.** Second draft (`v0.2.0` supersedes `v0.1.0`; §14). The stages, their inputs, outputs and done-tests are set (§5.0). The engine rules it shares with `[ORG]AIOC-TOM` (the Review Panel rule, two authors, labels, decision rules) are carried from the TOM blueprint `v0.4.1` by section, not copied (§5.9; Annex E). The decisions only a human seat can take are listed once, in §13.
+**Where this blueprint stands.** Third draft (`v0.3.0` supersedes `v0.2.0`; §14). The stages, their inputs, outputs and done-tests are set (§5.0). The engine rules it shares with `[ORG]AIOC-TOM` (the Review Panel rule, two authors, labels, decision rules) are carried from the TOM blueprint `v0.4.1` by section, not copied (§5.9; Annex E). The decisions only a human seat can take are listed once, in §13.
 
 ---
 
@@ -93,7 +94,7 @@ blueprint:
 | Made from | the Library part 49GAION Process and Position Design, part card `v1` (DRAFT), and Protocol §17, both proposed on 15 October 2026 (`decisions/DR-0001`) |
 | Template | 49GAION AIOC Blueprint Template `v1.5.0` at `e89ed1d` (with the `v1.6.0` additions: mechanism register and Reserve, checks that are not fixed tests, the added Configuration rows, position codes only) |
 | Mother | 49GAION Process and Position Design, part card `v1`. This text is its mother blueprint |
-| Blueprint version and status | `v0.2.0` · draft |
+| Blueprint version and status | `v0.3.0` · draft |
 | Accountable seat (`[ORG]HOAC-ACS`) | the PPD Design Lead, `[ORG]CELL-PDL`, a HOAC position. Who occupies it is top management's own mechanism; this AIOC never sees it (Standard §1.1, item 9) |
 | Reports to | the Cell carrying `[ORG]HOAC-TM` |
 | Writing repository | `<org>aioc-ppd`, plus `-records` for an organisation's runs and `-records-restricted` for run records that touch a Strictly confidential source (Naming Standard R9). The mother text lives in a public repository and holds no organisation data |
@@ -116,7 +117,7 @@ card:
   inner_units: ["[ORG]CELL-PDL", "[ORG]CELL-PCS", "[ORG]POD-PRI", "[ORG]POD-PA", "[ORG]POD-PPW", "[ORG]POD-PPS", "[ORG]POD-PS", "[ORG]POD-PW", "[ORG]POD-PR"]
   type: "specialised"
   org_aion: "[ORG]AION"
-  card_version: "v0.2.0"
+  card_version: "v0.3.0"
   input_door: "Chief of Staff"
   wake: { method: "queue", verified: false }
   receives:
@@ -159,17 +160,17 @@ card:
   anatomy:
     panel: { health: { tests: true, metrics: ["stuck", "returned", "late", "run state", "returns open", "returns answered", "needs open", "needs past deadline", "processes by state", "positions by state", "assumptions open", "reviews held", "review budget used"] } }
     back_office: { converses_with_humans: false, hosts: ["Chief of Staff", "Office"], protocol_traffic: true }
-    definition: { location: "<org>aioc-ppd, blueprint/PPD-BLUEPRINT.md", version: "v0.2.0" }
+    definition: { location: "<org>aioc-ppd, blueprint/PPD-BLUEPRINT.md", version: "v0.3.0" }
     delivery: { rollback: "one-click" }
     connectors:
       - { role: "operating model source", connector: "[ORG]AIOC-TOM release port", access_managed_in: "panel" }   # the grant is signed at the tool gateway as connect-external-port (Protocol §17, item 8)
       - { role: "source of record", connector: "[ORG]AIOC-SL output socket", access_managed_in: "panel" }      # as above (Protocol §13, item 5)
     gateway: { metering_id: "<per-AIOC metering id>" }
   full_name: "Process and Position Design"
-  version: "0.2.0"
-  lineage: { id: "[ORG]AIOC-PPD", version: "0.2.0", relation: "original" }
+  version: "0.3.0"
+  lineage: { id: "[ORG]AIOC-PPD", version: "0.3.0", relation: "original" }
   lifecycle_state: "designed"
-  blueprint_version: "v0.2.0"
+  blueprint_version: "v0.3.0"
   template_version: "v1.5.0"
   accountable_to: "[ORG]CELL-TMS"         # example code of the Cell carrying [ORG]HOAC-TM (Naming Standard R15); never a Cell inside this AIOC
   top_cell: "[ORG]CELL-PDL"
@@ -322,7 +323,7 @@ Default, plus:
 | Tools and access | the TOM and Source Lifecycle connections through the tool gateway, within their signed scopes; the code steps of the code project; no credential in any instruction |
 | Deputy and cover | none; on failure the run halts and the Design Lead is told |
 | Fixed test and score | TEST-PPD-PCS v1 (§9), plus the default Chief of Staff test |
-| Card version and status | v0.2.0 · draft |
+| Card version and status | v0.3.0 · draft |
 #### Fixed test
 TEST-PPD-PCS v1 · result `NOT_RUN`
 
@@ -374,7 +375,7 @@ Ten stages (§5.0) are performed by the Input socket (§4.3: S0) and these capab
 | S3 | **Critical processes** | `choosing` | T3 | The decided architecture. | The **critical-process choice**, with its reasons; the order in which processes are written. | **T3**: every process that crosses two parts of the release is either chosen or set aside with a reason; RP3 settled clear; the choice decided. | Requesting Authority: the choice and the order. |
 | S4 | **Write the processes** | `writing` | T4 | Per process: its architecture entry; the release elements it carries; the pack's atoms for it. | Per process: its **process record** (Annex A.3). For a critical process: two locked drafts, the difference register and the reconciled record (Annex E, two authors). The **policy register** (Annex A.4) and the **controls catalogue** (Annex A.11), compiled by code from the process records. | **T4**, per process: each step has one accountable role and an input and output; each decision has exactly one decider; each lane hand-off is matched at both ends; each exception names its escalation; each measure, volume and time has a source or is an assumption; each step carries its done-when, worst error and reversibility, act kinds, input source and trust, confidentiality, risks, controls and record (§5.4, rules 11 and 12); the modelling conventions report no `error`; the end-to-end time is computed; RP4 settled with no unresolved `MATERIAL` finding. | Requesting Authority: assumptions; contradictions touching the process; control gaps; measure targets. PPD Design Lead: rulings. |
 | S5 | **Shape the positions** | `shaping` | T5 | The written processes; the role register. | The **position register** (Annex A.5); the **job descriptions** (Annex A.6), generated by code; the **decision-rights register** and the **authority matrix** (Annex A.7), generated by code; the **objectives cascade** (Annex A.12), generated by code. | **T5**: every step and decision sits in exactly one position; every position holds at least one; every position belongs to one role; every position passes the segregation-of-duties rules or its breach is put to decision; every competence traces to a step or decision; the generated parts re-generate byte-identical; RP5 settled with no unresolved `MATERIAL` finding. | Requesting Authority: positions; decision limits with no source; job families and levels with no source; segregation rules with no source; separation breaches. |
-| S6 | **Structure** | `structuring` | T6 | The position register; the release's parts and governance; the pack's sources of the current organisation. | **Reporting lines**, the **organisation charts** (generated by code), the **forum register** with charters and tiers, the **review calendar** (generated by code), the **result lines**, and the **crosswalk** (Annex A.8); the **structure scenarios** (Annex A.13) when `structure_scenarios` is above one. | **T6**: every position has one reporting line and no line forms a loop; spans and layers reported against the configured ranges; every forum has a charter and a tier; every measure has a forum that reviews it; every current unit, position and process in the sources is mapped or marked with a reason; with scenarios, each is shown on the same measures and one is decided; RP6 settled with no unresolved `MATERIAL` finding. | Requesting Authority: reporting lines; forums; span and layer findings; result lines with no source; the structure scenario; crosswalk rows marked `retired`. |
+| S6 | **Structure** | `structuring` | T6 | The position register; the release's parts and governance; the pack's sources of the current organisation. | The **unit register** and the **unit charters** (Annex A.15, charters generated by code); **reporting lines**, the **organisation charts** (generated by code), the **forum register** with charters and tiers, the **review calendar** (generated by code), the **result lines**, and the **crosswalk** (Annex A.8); the **structure scenarios** (Annex A.13) when `structure_scenarios` is above one. | **T6**: every position belongs to exactly one unit; every unit has one head position from among its own positions, one parent unit and a charter that traces to its positions; no unit loop; every position has one reporting line and no line forms a loop; spans and layers reported against the configured ranges; every forum has a charter and a tier; every measure has a forum that reviews it; every current unit, position and process in the sources is mapped or marked with a reason; with scenarios, each is shown on the same measures and one is decided; RP6 settled with no unresolved `MATERIAL` finding. | Requesting Authority: units and their heads; reporting lines that depart from the units; forums; span and layer findings; result lines with no source; the structure scenario; crosswalk rows marked `retired`. |
 | S7 | **Workload** | `loading` | T7 | The written processes (volumes, step times); the position register; the time available per position, from a source or a decision. | The **workload register** (Annex A.9) and the **peak-load check and value-stream times** (Annex A.14), generated by code. | **T7**: every figure traces to the steps it sums; every input is a source or a decided assumption; every peak figure traces to its peak volumes and step times; RP7 settled clear. | Requesting Authority: the time available; assumptions; peak findings. |
 | S8 | **Walk** | `walking` | T8 | The walk input, compiled by code from S2 to S7; a blind brief for the Situation Author. | The sealed situation set; the trace; the finding register; the **walkthrough report**. | **T8**: situations sealed before the walk; every situation traced to its end or to a finding; every finding fixed or put to decision; RP8 settled with no unresolved `MATERIAL` finding. | Requesting Authority: notice choices. PPD Design Lead: rulings. |
 | S9 | **Decide and release** | `deciding`; end states `released`, then `filed` | T9, then T10 | Every reviewed part of S1 to S8, by hash; every pack version; the settled review records. | The **quality checks**; the Design Lead's attestation of T0 to T8; the **Decision Package** (Annex A.10); then the **PPD Release** manifest and its parts; the filing receipt; the release notice to the next stage. | **T9**: every element decided (`ACCEPT`, `CORRECT`, `REJECT`) and the final status decided; every process carries its owner position and its re-approval date; silence decided nothing. **T10**: the manifest is content-addressed; every element traces to a release element or a source atom; the release lint passes; the release is filed and reads back by hash; the release notice is sent. | Requesting Authority: each element and the final status. PPD Design Lead: the attestation. |
@@ -424,7 +425,7 @@ Ten stages (§5.0) are performed by the Input socket (§4.3: S0) and these capab
 | Escalation | to the Chief of Staff, with the elements and evidence |
 | Tools and access | the Input Pack only; no tools, no outside access, a fresh context per dispatch |
 | Fixed test and score | TEST-PPD-PRR v1 (§9) |
-| Card version and status | v0.2.0 · draft |
+| Card version and status | v0.3.0 · draft |
 
 #### Fixed test
 TEST-PPD-PRI v1 and TEST-PPD-PRR v1 · result `NOT_RUN`
@@ -473,7 +474,7 @@ TEST-PPD v1, cases 8, 31, 32, 33, 34 · result `NOT_RUN`
 | Escalation | to the Chief of Staff; a defect in the release is a return draft |
 | Tools and access | the Input Pack only; a fresh context per dispatch |
 | Fixed test and score | TEST-PPD-PPA v1 (§9) |
-| Card version and status | v0.2.0 · draft |
+| Card version and status | v0.3.0 · draft |
 
 #### Fixed test
 TEST-PPD-PA v1 and TEST-PPD-PPA v1 · result `NOT_RUN`
@@ -513,7 +514,7 @@ TEST-PPD-PA v1 and TEST-PPD-PPA v1 · result `NOT_RUN`
 | Escalation | to the Chief of Staff; a defect in the release is a return draft |
 | Tools and access | the Input Pack only; a fresh context per dispatch; author engines of two families (Annex E) |
 | Fixed test and score | TEST-PPD-PFPA v1, TEST-PPD-PSPA v1, TEST-PPD-PPR v1 (§9) |
-| Card version and status | v0.2.0 · draft |
+| Card version and status | v0.3.0 · draft |
 
 #### Fixed test
 TEST-PPD-PPW v1 and the tests of its Cells · result `NOT_RUN`
@@ -551,7 +552,7 @@ TEST-PPD-PPW v1 and the tests of its Cells · result `NOT_RUN`
 | Escalation | to the Chief of Staff; work that fits no role is a return draft |
 | Tools and access | the written processes and the role register only; a fresh context per dispatch |
 | Fixed test and score | TEST-PPD-PPB v1 (§9) |
-| Card version and status | v0.2.0 · draft |
+| Card version and status | v0.3.0 · draft |
 
 #### Fixed test
 TEST-PPD-PPS v1 and TEST-PPD-PPB v1 · result `NOT_RUN`
@@ -562,17 +563,17 @@ TEST-PPD-PPS v1 and TEST-PPD-PPB v1 · result `NOT_RUN`
 | Field | Content |
 |---|---|
 | Name | Structure |
-| Purpose | set who each position reports to, where positions meet, and how today's organisation maps to the target |
+| Purpose | group the positions into units, set who each position reports to, where positions meet, and how today's organisation maps to the target |
 | Trigger | T5 passed |
 | Inputs | the position register; the release's parts and governance skeleton; the pack's sources of the current organisation |
-| Outputs | reporting lines; organisation charts (generated by code); the forum register with charters; the crosswalk (Annex A.8) |
+| Outputs | the unit register and the unit charters (Annex A.15); reporting lines; organisation charts (generated by code); the forum register with charters; the crosswalk (Annex A.8) |
 | Performed by | the Structure Designer (`[ORG]CELL-PSD`) in the Structure Pod (`[ORG]POD-PS`) |
 | Done when | T6 (§5.0) |
-| Rules | 1. **One line.** Every position has one reporting line, within its part of the release, unless the release's governance places it elsewhere. No line forms a loop. 2. **Spans and layers are checks.** They are reported against `span_range` and `layers_max`. A value outside the range is a finding for decision, never an automatic change. 3. **Forums.** Each standing forum the processes need (a committee, a board, a review meeting) has a charter: its purpose, the decisions it takes or advises on, its member positions, its chair position, its cadence, its inputs and its outputs. A forum takes only decisions the decision-rights register gives it. 4. **The crosswalk.** Every current unit, position and process named in the sources is mapped to a target element, or marked `retired` or `not mapped`, each with its reason. A `retired` row is a decision row. 5. **Charts are generated** from the reporting lines, never drawn by hand. 6. **Tiers and the review calendar.** Each forum carries its tier: `daily`, `weekly`, `monthly`, `quarterly` or `annual`. Code generates the review calendar from the forum register and the measures each forum reviews. A measure that no forum reviews, or a tier the processes need that no forum holds, is a finding for decision. 7. **The result line.** Each part of the release names the line of the organisation's results it moves most (for example revenue, cost, cash or risk), from a source or a decision. 8. **Structure scenarios.** When `structure_scenarios` is above one, the Structure Designer proposes that many structures. Code shows them side by side on the same measures: positions, management positions, spans, layers and cost. Cost appears only where the organisation gives cost rates per job family and level as a source; with none, it reads `not given`. The Requesting Authority chooses one; this AIOC never chooses. |
+| Rules | 0. **Units first.** The Structure Designer groups the positions into units under each part of the release: teams, sections, departments, named in the organisation's own words. Each grouping records its reason: the same process or value stream, the same expertise, the same counterpart, the same location, or the release's own grouping. Every position belongs to exactly one unit; every unit holds at least one position, has one head position from among its own positions and one parent unit (the top units of a part sit under the part), and no unit tree forms a loop. Each unit's charter is generated by code from what its positions hold: its mandate (the processes and decisions it is accountable for), its head, its member positions, its forums, its measures and its result line; a charter line that traces to nothing fails the lint. 1. **One line.** Every position has one reporting line, within its part of the release, unless the release's governance places it elsewhere. By default a position reports to its unit's head, and a unit's head to the head of the parent unit; a line that departs from the units is a decision row. No line forms a loop. 2. **Spans and layers are checks.** They are reported against `span_range` and `layers_max`. A value outside the range is a finding for decision, never an automatic change. 3. **Forums.** Each standing forum the processes need (a committee, a board, a review meeting) has a charter: its purpose, the decisions it takes or advises on, its member positions, its chair position, its cadence, its inputs and its outputs. A forum takes only decisions the decision-rights register gives it. 4. **The crosswalk.** Every current unit, position and process named in the sources is mapped to a target element, or marked `retired` or `not mapped`, each with its reason. A `retired` row is a decision row. 5. **Charts are generated** from the reporting lines, never drawn by hand. 6. **Tiers and the review calendar.** Each forum carries its tier: `daily`, `weekly`, `monthly`, `quarterly` or `annual`. Code generates the review calendar from the forum register and the measures each forum reviews. A measure that no forum reviews, or a tier the processes need that no forum holds, is a finding for decision. 7. **The result line.** Each part of the release names the line of the organisation's results it moves most (for example revenue, cost, cash or risk), from a source or a decision. 8. **Structure scenarios.** When `structure_scenarios` is above one, the Structure Designer proposes that many structures. Code shows them side by side on the same measures: positions, management positions, spans, layers and cost. Cost appears only where the organisation gives cost rates per job family and level as a source; with none, it reads `not given`. The Requesting Authority chooses one; this AIOC never chooses. |
 
 #### Process (SOP)
-1. **Structure Designer**: propose reporting lines and forums, and draft the crosswalk → *structure draft* (evidence: one row per position, forum and current element).
-2. **Chief of Staff**: run the line checks, the span and layer report, and generate the charts, the review calendar and, with scenarios, the side-by-side view → *check record; charts; review calendar; scenario view* (evidence: re-generated byte-identical).
+1. **Structure Designer**: propose the units with their heads and reasons, the reporting lines and the forums, and draft the crosswalk → *structure draft* (evidence: one row per unit, position, forum and current element).
+2. **Chief of Staff**: run the unit and line checks, the span and layer report, and generate the unit charters, the charts, the review calendar and, with scenarios, the side-by-side view → *check record; charts; review calendar; scenario view* (evidence: re-generated byte-identical).
 3. **Chief of Staff**: run RP6, then send the rows for decision → *decided rows* (evidence: decision references).
 
 #### Role card
@@ -581,14 +582,14 @@ TEST-PPD-PPS v1 and TEST-PPD-PPB v1 · result `NOT_RUN`
 | Name | Structure Designer |
 | Position and seat | Structure Designer; accountable seat: the PPD Design Lead |
 | Performed by | an agent (`[ORG]CELL-PSD`, full name PPD Structure Designer) |
-| Purpose | reporting lines, forums and the crosswalk |
-| Authority limits | alone: propose; never: change a position's steps, change a span or layer to fit a range, retire a current element without a decision, ask a person |
+| Purpose | units, reporting lines, forums and the crosswalk |
+| Authority limits | alone: propose; never: change a position's steps, move a position out of its role, write a unit charter by hand, change a span or layer to fit a range, retire a current element without a decision, ask a person |
 | Write location | the run record |
 | Reports to | Chief of Staff |
 | Escalation | to the Chief of Staff |
 | Tools and access | the position register, the release and the pack; a fresh context per dispatch |
 | Fixed test and score | TEST-PPD-PSD v1 (§9) |
-| Card version and status | v0.2.0 · draft |
+| Card version and status | v0.3.0 · draft |
 
 #### Fixed test
 TEST-PPD-PS v1 and TEST-PPD-PSD v1 · result `NOT_RUN`
@@ -625,7 +626,7 @@ TEST-PPD-PS v1 and TEST-PPD-PSD v1 · result `NOT_RUN`
 | Escalation | to the Chief of Staff |
 | Tools and access | the written processes and the position register; a fresh context per dispatch |
 | Fixed test and score | TEST-PPD-PWA v1 (§9) |
-| Card version and status | v0.2.0 · draft |
+| Card version and status | v0.3.0 · draft |
 
 #### Fixed test
 TEST-PPD-PWA v1 · result `NOT_RUN`
@@ -749,13 +750,13 @@ TEST-PPD-PCS v1 (cases 64 to 67) · result `NOT_RUN`
 
 ## 9. Fixed tests: index, triggers and scores
 
-The cases are written in `tests/TEST-PPD.md`. Cases 1 to 22 are the Library's TEST-PROCESS-AND-POSITION-DESIGN v1, cases 1 to 22, unchanged. Cases 23 to 94 are this AIOC's own. The Design Lead's seat test is PDL-1 to PDL-5. The owner of every part's test is the PPD Design Lead; the owner of the AIOC's whole test, and of the Design Lead's own seat test, is the Cell carrying `[ORG]HOAC-TM`.
+The cases are written in `tests/TEST-PPD.md`. Cases 1 to 22 are the Library's TEST-PROCESS-AND-POSITION-DESIGN v1, cases 1 to 22, unchanged. Cases 23 to 97 are this AIOC's own. The Design Lead's seat test is PDL-1 to PDL-5. The owner of every part's test is the PPD Design Lead; the owner of the AIOC's whole test, and of the Design Lead's own seat test, is the Cell carrying `[ORG]HOAC-TM`.
 
 | Part | Test ID and version | Cases of TEST-PPD v1 | Evidence level | Last run | Result |
 |---|---|---|---|---|---|
-| `[ORG]AIOC-PPD` (whole) | TEST-PPD v1 | all (1–94) | MEASURED | — | `NOT_RUN` |
+| `[ORG]AIOC-PPD` (whole) | TEST-PPD v1 | all (1–97) | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-PDL` PPD Design Lead | TEST-PPD-PDL v1 | PDL-1 to PDL-5 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-PCS` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Release) | TEST-PPD-PCS v1 | 1–4, 8, 13, 18, 19, 21–27, 29–34, 48, 51, 62, 64–67, 73–75, 83, 84, 86, 87, 90, 92, 94 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-PCS` Chief of Staff (with Office, Input socket, Needs Requests, Decision Package and Release) | TEST-PPD-PCS v1 | 1–4, 8, 13, 18, 19, 21–27, 29–34, 48, 51, 62, 64–67, 73–75, 83, 84, 86, 87, 90, 92, 94, 96 | MEASURED | — | `NOT_RUN` |
 | Panel | default Panel test | — | MEASURED | — | `NOT_RUN` |
 | `[ORG]POD-PRI` Release Intake | TEST-PPD-PRI v1 | 3, 5, 6, 7, 28, 30, 47 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-PRR` Release Reader | TEST-PPD-PRR v1 | 3, 5, 28, 30, 47 | MEASURED | — | `NOT_RUN` |
@@ -767,8 +768,8 @@ The cases are written in `tests/TEST-PPD.md`. Cases 1 to 22 are the Library's TE
 | `[ORG]CELL-PPR` Process Reconciler | TEST-PPD-PPR v1 | 39, 41 | MEASURED | — | `NOT_RUN` |
 | `[ORG]POD-PPS` Position Shaping | TEST-PPD-PPS v1 | 12, 13, 20, 46–52, 77, 84, 85 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-PPB` Position Builder | TEST-PPD-PPB v1 | 12, 20, 46, 47, 52, 77, 85 | MEASURED | — | `NOT_RUN` |
-| `[ORG]POD-PS` Structure | TEST-PPD-PS v1 | 14, 15, 53–58, 87–90 | MEASURED | — | `NOT_RUN` |
-| `[ORG]CELL-PSD` Structure Designer | TEST-PPD-PSD v1 | 14, 53–56, 87, 88 | MEASURED | — | `NOT_RUN` |
+| `[ORG]POD-PS` Structure | TEST-PPD-PS v1 | 14, 15, 53–58, 87–90, 95–97 | MEASURED | — | `NOT_RUN` |
+| `[ORG]CELL-PSD` Structure Designer | TEST-PPD-PSD v1 | 14, 53–56, 87, 88, 95, 97 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-PWA` Workload Analyst | TEST-PPD-PWA v1 | 15, 16, 57, 58, 89, 90 | MEASURED | — | `NOT_RUN` |
 | `[ORG]POD-PW` Walkthrough | TEST-PPD-PW v1 | 17, 59, 60 | MEASURED | — | `NOT_RUN` |
 | `[ORG]CELL-PSA` Situation Author | TEST-PPD-PSA v1 | 59 | MEASURED | — | `NOT_RUN` |
@@ -816,6 +817,7 @@ One dated line per lesson, each written without any organisation's details. Noth
 2. 2026-10-15 · A stage that reads a design release must be able to send defects back to the stage that made it, without a person relaying them. Test question added: cases 5 to 7. Proposed: the TOM changes in `upstream/PROPOSALS.md`, item 1.
 3. 2026-10-15 · Fifteen products that design, launch or run organisations were taken apart from public material, and each useful feature was placed in the stage where it truly belongs. Those that belong here: the facts of each step, controls and segregation of duties, the objectives cascade, measures of three kinds, structure scenarios, peak load, variants, modelling conventions, forum tiers, end-to-end time and re-approval. Anything that rates or watches a person was not taken. Test questions added: cases 78 to 94 (`decisions/DR-0002`). Proposed: `upstream/PROPOSALS.md`, item 5.
 4. 2026-10-15 · A review of what launching an organisation needs after this stage found three small additions that belong here: a competence profile in each job description; risk, control and record per step; measure definitions and the review calendar beside the forums. Test questions added: cases 82, 85 and 87 (`decisions/DR-0002`).
+5. 2026-10-15 · Positions alone do not make an organisation that can launch: they must be grouped into units, each with a head and a mandate, and that grouping belongs in the same stage as the positions. Test questions added: cases 95 to 97 (`decisions/DR-0003`).
 
 ## 13. For the `[ORG]HOAC-ACS` seat, and every decision only a human seat can take
 
@@ -833,11 +835,11 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | H-08 | `review_budget_per_run`, `reduced_review_permitted` and the AIOC's `budget_cap` | the Cell carrying `[ORG]HOAC-TM` | none: must be set; reduced review `no` |
 | H-09 | `span_range`, `layers_max`, `workload_period`, `re_approval_period` and `structure_scenarios` | the Cell carrying `[ORG]HOAC-TM` | none: must be set; `structure_scenarios` 1 |
 | H-10 | Open the run; name the children in scope | Requesting Authority | none: no run |
-| H-11 | The rows of S1 to S9: architecture; critical choice and order; assumptions; contradictions; control gaps; measure targets; positions; decision limits; job families and levels with no source; segregation rules with no source; separation breaches; reporting lines; forums; span and layer findings; result lines with no source; the structure scenario; crosswalk rows marked `retired`; time available; peak findings; walk notices; each element and the final status | Requesting Authority | undecided |
+| H-11 | The rows of S1 to S9: architecture; critical choice and order; assumptions; contradictions; control gaps; measure targets; positions; units and their heads; decision limits; job families and levels with no source; segregation rules with no source; separation breaches; reporting lines; forums; span and layer findings; result lines with no source; the structure scenario; crosswalk rows marked `retired`; time available; peak findings; walk notices; each element and the final status | Requesting Authority | undecided |
 | H-12 | Inside a run: rule on contested `MATERIAL` findings; accept a reduced level within H-08; approve a second run; attest T0 to T8 | the PPD Design Lead | none taken; the step waits |
 | H-13 | Create `<org>aioc-ppd-records` and `-records-restricted`, recorded first (Naming Standard R9) | the Cell carrying `[ORG]HOAC-TM` | before the first run |
 | H-14 | Send the drafts of `upstream/` to 49GAION or to the parts they concern | GOV | after this blueprint is approved |
-| H-15 | Approve this blueprint `v0.2.0` as the design of `[ORG]AIOC-PPD` | the human hub | it stays a draft; nothing is installed |
+| H-15 | Approve this blueprint `v0.3.0` as the design of `[ORG]AIOC-PPD` | the human hub | it stays a draft; nothing is installed |
 
 **Money:** the budget cap and the review budget (H-08). **People:** H-07 (decided); this AIOC designs positions, never who fills them. **Legal:** none decided here.
 
@@ -846,7 +848,8 @@ Every decision that only a human seat can take is listed here once. Silence deci
 | Blueprint version | Date | Change | Template version | Commit |
 |---|---|---|---|---|
 | v0.1.0 | 2026-10-15 | First blueprint of `[ORG]AIOC-PPD`, the mother text of the Library part 49GAION Process and Position Design (Protocol §17, proposed): ten stages, processes first; the direct link to `[ORG]AIOC-TOM`, with returns; positions only; TEST-PPD v1 | v1.5.0 at `e89ed1d` | this commit |
-| v0.2.0 | 2026-10-15 | The additions of `decisions/DR-0002`, from the study of fifteen rival products and the launch-readiness review: the facts of each step; risk, control and record per step, the controls catalogue and segregation of duties; competence profiles; the objectives cascade and measures of three kinds; forum tiers and the review calendar; structure scenarios; the peak-load check and end-to-end times; variants; modelling conventions; reference models as methods; approval and re-approval. Release parts A.11 to A.14; TEST-PPD v1, cases 78 to 94. Supersedes `v0.1.0` | v1.5.0 at `e89ed1d` | this pull request |
+| v0.2.0 | 2026-10-15 | The additions of `decisions/DR-0002`, from the study of fifteen rival products and the launch-readiness review: the facts of each step; risk, control and record per step, the controls catalogue and segregation of duties; competence profiles; the objectives cascade and measures of three kinds; forum tiers and the review calendar; structure scenarios; the peak-load check and end-to-end times; variants; modelling conventions; reference models as methods; approval and re-approval. Release parts A.11 to A.14; TEST-PPD v1, cases 78 to 94. Supersedes `v0.1.0` | v1.5.0 at `e89ed1d` | `65403ae` (pull request #2) |
+| v0.3.0 | 2026-10-15 | Units in this stage (`decisions/DR-0003`): positions grouped into units, each with its head position and a charter generated by code; reporting lines follow the units unless decided otherwise; release part A.15; TEST-PPD v1, cases 95 to 97. Supersedes `v0.2.0` | v1.5.0 at `e89ed1d` | this pull request |
 
 ---
 
@@ -914,8 +917,8 @@ The parts inside this AIOC (`docs/CELLS-AND-PODS.md` of `49GAION-aioc`). The rol
 parts:
   defaults:
     accountable_to: "[ORG]CELL-PDL"
-    card_version: "v0.2.0"
-    version: "0.2.0"
+    card_version: "v0.3.0"
+    version: "0.3.0"
     lifecycle_state: "designed"
     test_version: "v1"
     test_owner: "[ORG]CELL-PDL"
@@ -948,7 +951,7 @@ parts:
       type: "AI Chief of Staff"
       filler_kind: "ai"
       cell_kind: "chief-of-staff-cell"
-      test: { id: "TEST-PPD-PCS", cases: "1-4, 8, 13, 18, 19, 21-27, 29-34, 48, 51, 62, 64-67, 73-75, 83, 84, 86, 87, 90, 92, 94" }
+      test: { id: "TEST-PPD-PCS", cases: "1-4, 8, 13, 18, 19, 21-27, 29-34, 48, 51, 62, 64-67, 73-75, 83, 84, 86, 87, 90, 92, 94, 96" }
       ai_in: ["release notice", "source reference", "needs answer", "needs status", "needs candidate", "return draft", "locked outputs of the Pods", "settled review records"]
       ai_out: ["Input Pack version", "dispatch to a Pod", "review packet", "return", "needs request", "missing report", "generated parts", "PPD Release filing", "release notice"]
       hu_out: ["run brief to the PPD Design Lead", "ruling sheets to the PPD Design Lead", "release notice to the Requesting Authority's Cell"]
@@ -966,7 +969,7 @@ parts:
     - { code: "[ORG]CELL-PSPA", full_name: "PPD Second Process Author", role: "Second Process Author", parent: "[ORG]POD-PPW", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-PPD-PSPA", cases: "11, 16, 39-45, 78-82, 86, 91" }, ai_in: ["architecture entry", "release elements", "Input Pack atoms"], ai_out: ["process record draft", "return draft", "needs candidate"], bot: { allowed_actions: ["write a process record, blind to the other author"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-PPR", full_name: "PPD Process Reconciler", role: "Process Reconciler", parent: "[ORG]POD-PPW", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-PPD-PPR", cases: "39, 41" }, ai_in: ["two locked drafts", "difference register", "the atoms and elements the drafts cite"], ai_out: ["reconciled process record", "the dispositions of the difference register"], bot: { allowed_actions: ["reconcile two locked drafts, disposing each difference with its reason"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-PPB", full_name: "PPD Position Builder", role: "Position Builder", parent: "[ORG]POD-PPS", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-PPD-PPB", cases: "12, 20, 46, 47, 52, 77, 85" }, ai_in: ["written processes", "role register"], ai_out: ["position register draft", "return draft"], bot: { allowed_actions: ["group steps and decisions into positions, with reasons"], ask_first_actions: ["anything outside its role card"] } }
-    - { code: "[ORG]CELL-PSD", full_name: "PPD Structure Designer", role: "Structure Designer", parent: "[ORG]POD-PS", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-PPD-PSD", cases: "14, 53-56, 87, 88" }, ai_in: ["position register", "release parts and governance", "Input Pack atoms"], ai_out: ["reporting lines", "forum register", "crosswalk"], bot: { allowed_actions: ["propose reporting lines and forums", "draft the crosswalk"], ask_first_actions: ["anything outside its role card"] } }
+    - { code: "[ORG]CELL-PSD", full_name: "PPD Structure Designer", role: "Structure Designer", parent: "[ORG]POD-PS", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-PPD-PSD", cases: "14, 53-56, 87, 88, 95, 97" }, ai_in: ["position register", "release parts and governance", "Input Pack atoms"], ai_out: ["unit register", "reporting lines", "forum register", "crosswalk"], bot: { allowed_actions: ["propose units, reporting lines and forums", "draft the crosswalk"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-PWA", full_name: "PPD Workload Analyst", role: "Workload Analyst", parent: "[ORG]POD-PS", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-PPD-PWA", cases: "15, 16, 57, 58, 89, 90" }, ai_in: ["written processes", "position register"], ai_out: ["workload input check", "needs candidate"], bot: { allowed_actions: ["check each workload input's source or assumption", "raise needs candidates for gaps"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-PSA", full_name: "PPD Situation Author", role: "Situation Author", parent: "[ORG]POD-PW", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-PPD-PSA", cases: "59" }, ai_in: ["blind brief"], ai_out: ["blind situation pack"], bot: { allowed_actions: ["write the blind situation pack"], ask_first_actions: ["anything outside its role card"] } }
     - { code: "[ORG]CELL-PSW", full_name: "PPD Situation Walker", role: "Situation Walker", parent: "[ORG]POD-PW", type: "AI Agent", filler_kind: "ai", test: { id: "TEST-PPD-PSW", cases: "17, 60" }, ai_in: ["sealed situation set", "walk input"], ai_out: ["trace", "finding register"], bot: { allowed_actions: ["walk sealed situations", "classify findings"], ask_first_actions: ["anything outside its role card"] } }
@@ -980,7 +983,7 @@ parts:
     - { code: "[ORG]POD-PA", full_name: "PPD Architecture", type: "AI Pod", inner_units: ["[ORG]CELL-PPA"], top_cell: "[ORG]CELL-PPA", test: { id: "TEST-PPD-PA", cases: "9, 10, 35-38, 93" }, ai_in: ["release-reading record"], ai_out: ["process architecture", "critical-process proposal"] }
     - { code: "[ORG]POD-PPW", full_name: "PPD Process Writing", type: "AI Pod", inner_units: ["[ORG]CELL-PFPA", "[ORG]CELL-PSPA", "[ORG]CELL-PPR"], top_cell: "[ORG]CELL-PFPA", test: { id: "TEST-PPD-PPW", cases: "11, 16, 39-45, 78-82, 86, 91" }, ai_in: ["decided architecture", "Input Pack atoms"], ai_out: ["process records"] }
     - { code: "[ORG]POD-PPS", full_name: "PPD Position Shaping", type: "AI Pod", inner_units: ["[ORG]CELL-PPB"], top_cell: "[ORG]CELL-PPB", test: { id: "TEST-PPD-PPS", cases: "12, 13, 20, 46-52, 77, 84, 85" }, ai_in: ["written processes", "role register"], ai_out: ["position register"] }
-    - { code: "[ORG]POD-PS", full_name: "PPD Structure", type: "AI Pod", inner_units: ["[ORG]CELL-PSD", "[ORG]CELL-PWA"], top_cell: "[ORG]CELL-PSD", test: { id: "TEST-PPD-PS", cases: "14, 15, 53-58, 87-90" }, ai_in: ["position register", "written processes"], ai_out: ["reporting lines", "forum register", "crosswalk", "workload input check"] }
+    - { code: "[ORG]POD-PS", full_name: "PPD Structure", type: "AI Pod", inner_units: ["[ORG]CELL-PSD", "[ORG]CELL-PWA"], top_cell: "[ORG]CELL-PSD", test: { id: "TEST-PPD-PS", cases: "14, 15, 53-58, 87-90, 95-97" }, ai_in: ["position register", "written processes"], ai_out: ["unit register", "reporting lines", "forum register", "crosswalk", "workload input check"] }
     - { code: "[ORG]POD-PW", full_name: "PPD Walkthrough", type: "AI Pod", inner_units: ["[ORG]CELL-PSA", "[ORG]CELL-PSW"], top_cell: "[ORG]CELL-PSW", test: { id: "TEST-PPD-PW", cases: "17, 59, 60" }, ai_in: ["walk input", "blind brief"], ai_out: ["walkthrough report"] }
     - { code: "[ORG]POD-PR", full_name: "PPD Review", type: "AI Pod", inner_units: ["[ORG]CELL-PBRA", "[ORG]CELL-PBRB", "[ORG]CELL-PBRC", "[ORG]CELL-PBRD", "[ORG]CELL-PBRE"], top_cell: "[ORG]CELL-PBRA", test: { id: "TEST-PPD-PR", cases: "22, 61-63" }, ai_in: ["review packet"], ai_out: ["review cards and positions"] }
 ```
@@ -1025,7 +1028,7 @@ Every part is a versioned, content-addressed object. Every element carries an ID
 
 **A.7 Decision-rights register and authority matrix** (release parts; generated by code). Register: one row per decision: `decision_id`, `process_id`, `decider` (`POS-n`), the other parts by position, `limit`, `basis`. Matrix: positions by decision class, each cell the part the position plays, generated from the register.
 
-**A.8 Structure** (release parts). **Reporting lines**: `position_id`, `reports_to`. **Organisation charts**: generated from the lines, one per part of the release. **Span and layer report**: per manager position, its span; per part, its layers; each value against the configured range, with findings. **Forum register**: per forum, `forum_id`, `purpose`, `decides` and `advises` (decision IDs), `members` and `chair` (`POS-n`), `tier`, `cadence`, `reviews` (measure names), `inputs`, `outputs`. **Review calendar** (generated): per forum and period, the measures it reviews. **Result lines**: per part, `result_line`, with its basis. **Crosswalk**: per current unit, position or process named in the sources: `current_ref` (source atom), `maps_to` (target IDs), or `state` `retired` or `not mapped`, with `reason`.
+**A.8 Structure** (release parts). **Reporting lines**: `position_id`, `reports_to`. **Organisation charts**: generated from the units and the lines, one per part of the release. **Span and layer report**: per manager position, its span; per part, its layers; each value against the configured range, with findings. **Forum register**: per forum, `forum_id`, `purpose`, `decides` and `advises` (decision IDs), `members` and `chair` (`POS-n`), `tier`, `cadence`, `reviews` (measure names), `inputs`, `outputs`. **Review calendar** (generated): per forum and period, the measures it reviews. **Result lines**: per part, `result_line`, with its basis. **Crosswalk**: per current unit, position or process named in the sources: `current_ref` (source atom), `maps_to` (target IDs), or `state` `retired` or `not mapped`, with `reason`.
 
 **A.9 Workload register** (release part; generated by code). Per position: `position_id`, `period`, `time_needed` (sum of volume × step time over its steps), `time_available` (with its basis), `steps` (the terms of the sum), `complete` (no when any term is a gap), `gaps`.
 
@@ -1038,6 +1041,8 @@ Every part is a versioned, content-addressed object. Every element carries an ID
 **A.13 Structure scenarios** (release part, when `structure_scenarios` is above one). Per scenario: `scenario_id`, its reporting lines, and side by side: positions, management positions, spans, layers, `cost` (`not given` without the organisation's cost rates); `chosen` (the decision reference of the one chosen).
 
 **A.14 Peak-load check and value-stream times** (release part; generated by code). Per position: `peak_period`, `time_needed_at_peak`, `time_available`, `terms`, `complete`, findings. Per value stream: `end_to_end_time`, `processes`, `complete`.
+
+**A.15 Unit register and unit charters** (release parts; charters generated by code). Per unit: `unit_id` (`UNIT-n`), `name`, `kind` (the organisation's own word: team, section, department), `part` (the release part), `parent_unit`, `head_position` (`POS-n`, one of its positions), `positions`, `grouping_reason`, `forums`, `measures`, `result_line`. Charter, one per unit: `mandate` (its processes and decisions, from its positions' steps and decisions), `head_position`, `positions`, `works_with` (units at its hand-offs), `forums`, `measures`, `result_line`, `trace` (every line to a step, decision or forum). Never a person.
 
 **The manifest.** `release_id` (`PPDREL-` + SHA-256 of the manifest body); `run_id`; `tom_release` {`release_id`, `manifest_sha256`}; `parts[]` {name, sha256}; `input_packs[]`; `returns[]` (return IDs with their states); `decided_at`; `final_status`.
 
