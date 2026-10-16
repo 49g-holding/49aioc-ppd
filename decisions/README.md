@@ -10,5 +10,6 @@ One `DR-####` file per decided subject, numbered in order. A record file never c
 | [`DR-0002`](DR-0002-additions-from-rival-products-and-launch-review.md) | 2026-10-15 | Additions from the study of rival products and the launch-readiness review | in force |
 | [`DR-0003`](DR-0003-units-in-ppd.md) | 2026-10-15 | Units: positions are grouped into units in this stage | in force |
 | [`DR-0004`](DR-0004-chain-connected-both-ways.md) | 2026-10-16 | The chain connected on both sides; every return ends | in force |
+| [`DR-0005`](DR-0005-reading-what-tom-also-states.md) | 2026-10-16 | Reading what the TOM release also states | in force |
 
 *Powered by 49GAION*
