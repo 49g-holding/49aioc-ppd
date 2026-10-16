@@ -1,6 +1,6 @@
 # Proposals from Process and Position Design
 
-**From `[ORG]AIOC-OCO` · 15 October 2026 · drafts, not yet proposed.** Generalised: no organisation's name or data. A change to another AIOC is made through OCO and approved by the Cell carrying `[ORG]HOAC-TM`; a change to 49GAION reaches it only as a pull request merged by its governing seat.
+**From `[ORG]AIOC-OCO` · 15 October 2026 · drafts.** State on 16 October 2026: item 1 is made in the TOM blueprint `v0.5.0` (its `decisions/DR-0005`), with a contract of its own for the notice; items 3, 4 and 5 are merged in 49GAION in a revised form (Protocol §17, item 11, and §19; the Library cards of the Target Operating Model and of this part, v2; the Library's design return contract; `49GAION/DR-0016`, `DR-0018`); item 2 is open. Generalised: no organisation's name or data. A change to another AIOC is made through OCO and approved by the Cell carrying `[ORG]HOAC-TM`; a change to 49GAION reaches it only as a pull request merged by its governing seat.
 
 ## 1. To `[ORG]AIOC-TOM`: the direct link
 

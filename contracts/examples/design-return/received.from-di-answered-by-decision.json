@@ -1,0 +1,38 @@
+{
+  "return_id": "DIR-4",
+  "run_id": "RUN-0020",
+  "release": {
+    "release_id": "PPDREL-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "kind": "contradiction found",
+  "elements": [
+    {
+      "part": "position register",
+      "element_id": "POS-14"
+    },
+    {
+      "part": "process book",
+      "element_id": "STP-52"
+    }
+  ],
+  "evidence": [
+    {
+      "ref": "POS-14"
+    },
+    {
+      "ref": "STP-52"
+    }
+  ],
+  "held_here": [
+    "GAP-3"
+  ],
+  "round": 1,
+  "filed_ref": {
+    "source_id": "SRC-240",
+    "version": "1",
+    "sha256": "7777777777777777777777777777777777777777777777777777777777777777"
+  },
+  "status": "answered by decision",
+  "answered_by": "DEC-101"
+}

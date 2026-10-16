@@ -5,7 +5,7 @@ full_name: PPD Blind Reviewer B
 parent: '[ORG]POD-PR'
 accountable_to: '[ORG]CELL-PDL'
 type: AI Agent
-card_version: v0.3.0
+card_version: v0.4.0
 version: 0.3.0
 lineage:
   id: '[ORG]CELL-PBRB'
@@ -14,7 +14,7 @@ lineage:
 lifecycle_state: designed
 fixed_test:
   id: TEST-PPD-PBRB
-  version: v1
+  version: v2
   owner: '[ORG]CELL-PDL'
 filler_kind: ai
 ports:
@@ -29,7 +29,7 @@ ports:
   authority_limit: as in its role card (blueprint §4-§5)
   audit_trail: the run record of [ORG]AIOC-PPD
   required_tests:
-  - TEST-PPD-PBRB v1
+  - TEST-PPD-PBRB v2
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]CELL-PBRB'
   port: ai-out
@@ -42,7 +42,7 @@ ports:
   authority_limit: as in its role card (blueprint §4-§5)
   audit_trail: the run record of [ORG]AIOC-PPD
   required_tests:
-  - TEST-PPD-PBRB v1
+  - TEST-PPD-PBRB v2
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]CELL-PBRB'
   port: hu-in
@@ -54,7 +54,7 @@ ports:
   authority_limit: the signer's authority_scope; nothing received here is a source
   audit_trail: the run record of [ORG]AIOC-PPD
   required_tests:
-  - TEST-PPD-PBRB v1
+  - TEST-PPD-PBRB v2
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]CELL-PBRB'
   port: hu-out
@@ -66,7 +66,7 @@ ports:
   authority_limit: information only
   audit_trail: the run record of [ORG]AIOC-PPD
   required_tests:
-  - TEST-PPD-PBRB v1
+  - TEST-PPD-PBRB v2
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]CELL-PBRB'
   port: stop
@@ -78,6 +78,6 @@ ports:
   authority_limit: stop only
   audit_trail: unit register
   required_tests:
-  - TEST-PPD-PBRB v1
+  - TEST-PPD-PBRB v2
   enforcement: shared-gateway-outside-unit
   stop_door: true

@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:49gaion:library:ppd:release-notice:v0.4",
+  "title": "[ORG]AIOC-PPD - release notice to the next stage",
+  "description": "Sent to Delivery and Implementation on every filing of a decided PPD Release (blueprint §5.10, rule 5; Protocol §20, item 9). It points to the filed release and to the TOM Release it rests on; it never carries release text, atom text or the name of a person. notice_id is 'PPDN-' + the SHA-256 of the canonical notice without notice_id (keys sorted, separators ',' and ':', UTF-8). It is this AIOC's specialisation of the Library's release notice contract, proposed to 49GAION (library/contracts/release-notice.schema.json of 49GAION-protocol): the same fields, with this AIOC's patterns and values.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "notice_id",
+    "from",
+    "to",
+    "release",
+    "rests_on",
+    "filed_ref",
+    "final_status",
+    "final_status_ref",
+    "supersedes",
+    "answers",
+    "sent_at"
+  ],
+  "properties": {
+    "notice_id": {
+      "type": "string",
+      "pattern": "^PPDN-[a-f0-9]{64}$"
+    },
+    "from": {
+      "const": "[ORG]AIOC-PPD"
+    },
+    "to": {
+      "const": "[ORG]AIOC-DI"
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "release_id",
+        "version",
+        "manifest_sha256"
+      ],
+      "properties": {
+        "release_id": {
+          "type": "string",
+          "pattern": "^PPDREL-[a-f0-9]{64}$"
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "manifest_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "rests_on": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 1,
+      "description": "The decided TOM Release this PPD Release was designed from.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "release_id",
+          "manifest_sha256"
+        ],
+        "properties": {
+          "release_id": {
+            "type": "string",
+            "pattern": "^TOMR-[a-f0-9]{64}$"
+          },
+          "manifest_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "filed_ref": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_id",
+        "version",
+        "sha256"
+      ],
+      "description": "The filed copy of the PPD Release in Source Lifecycle, as the filing receipt names it.",
+      "properties": {
+        "source_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "final_status": {
+      "enum": [
+        "ACCEPT",
+        "ACCEPT WITH CORRECTIONS"
+      ],
+      "description": "Only a decided release is announced."
+    },
+    "final_status_ref": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The decision reference in Source Lifecycle."
+    },
+    "supersedes": {
+      "oneOf": [
+        {
+          "type": "string",
+          "pattern": "^PPDREL-[a-f0-9]{64}$"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "answers": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Z]{2,8}R-[0-9]+$"
+      },
+      "description": "The returns of Delivery and Implementation this release answers (blueprint §5.11); may be empty."
+    },
+    "sent_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
