@@ -5,7 +5,7 @@ full_name: PPD Walkthrough
 parent: '[ORG]AIOC-PPD'
 accountable_to: '[ORG]CELL-PDL'
 type: AI Pod
-card_version: v0.4.0
+card_version: v0.5.0
 version: 0.3.0
 lineage:
   id: '[ORG]POD-PW'
@@ -14,7 +14,7 @@ lineage:
 lifecycle_state: designed
 fixed_test:
   id: TEST-PPD-PW
-  version: v2
+  version: v3
   owner: '[ORG]CELL-PDL'
 inner_units:
 - '[ORG]CELL-PSA'
@@ -32,7 +32,7 @@ ports:
   authority_limit: as in its role card (blueprint §4-§5)
   audit_trail: the run record of [ORG]AIOC-PPD
   required_tests:
-  - TEST-PPD-PW v2
+  - TEST-PPD-PW v3
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]POD-PW'
   port: ai-out
@@ -44,7 +44,7 @@ ports:
   authority_limit: as in its role card (blueprint §4-§5)
   audit_trail: the run record of [ORG]AIOC-PPD
   required_tests:
-  - TEST-PPD-PW v2
+  - TEST-PPD-PW v3
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]POD-PW'
   port: hu-in
@@ -56,7 +56,7 @@ ports:
   authority_limit: the signer's authority_scope; nothing received here is a source
   audit_trail: the run record of [ORG]AIOC-PPD
   required_tests:
-  - TEST-PPD-PW v2
+  - TEST-PPD-PW v3
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]POD-PW'
   port: hu-out
@@ -68,7 +68,7 @@ ports:
   authority_limit: information only
   audit_trail: the run record of [ORG]AIOC-PPD
   required_tests:
-  - TEST-PPD-PW v2
+  - TEST-PPD-PW v3
   enforcement: shared-gateway-outside-unit
 - unit: '[ORG]POD-PW'
   port: stop
@@ -80,6 +80,6 @@ ports:
   authority_limit: stop only
   audit_trail: unit register
   required_tests:
-  - TEST-PPD-PW v2
+  - TEST-PPD-PW v3
   enforcement: shared-gateway-outside-unit
   stop_door: true
