@@ -16,7 +16,7 @@
 
 The writing repository of **`[ORG]AIOC-PPD`, Process and Position Design**: the mother text of the 49GAION Library part of the same name (49GAION Operating Protocol §17 and Standard §3.1, item 3, both proposed on 15 October 2026). In each organisation this repository is named `<org>aioc-ppd` (Naming Standard R9). It is written for any organisation and holds no organisation data.
 
-**Status: draft `v0.5.0`, 16 October 2026: the chain connected on both sides (`decisions/DR-0004`); reads what the TOM release also states (`decisions/DR-0005`). Nothing here has run; every fixed test reads `NOT_RUN`.**
+**Status: draft `v0.5.1`, 19 October 2026: the Chief of Staff takes its COS code `[ORG]CELL-COSPPD` (`decisions/DR-0006`); it builds on `v0.5.0`, 16 October 2026: the chain connected on both sides (`decisions/DR-0004`); reads what the TOM release also states (`decisions/DR-0005`). Nothing here has run; every fixed test reads `NOT_RUN`.**
 
 ## Where to read
 

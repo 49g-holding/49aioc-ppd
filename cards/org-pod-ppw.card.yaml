@@ -5,7 +5,7 @@ full_name: PPD Process Writing
 parent: '[ORG]AIOC-PPD'
 accountable_to: '[ORG]CELL-PDL'
 type: AI Pod
-card_version: v0.5.0
+card_version: v0.5.1
 version: 0.3.0
 lineage:
   id: '[ORG]POD-PPW'

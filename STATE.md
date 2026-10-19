@@ -2,12 +2,12 @@
 
 | Item | State |
 |---|---|
-| Blueprint | `v0.5.0`, draft (16 October 2026), superseding `v0.4.0`: the chain connected on both sides (`decisions/DR-0004`); reading what the TOM release also states (`decisions/DR-0005`); awaiting the human hub's approval (blueprint §13, H-15) |
+| Blueprint | `v0.5.1`, draft (19 October 2026): the Chief of Staff takes its COS code, `[ORG]CELL-PCS` → `[ORG]CELL-COSPPD` (`decisions/DR-0006`; Naming Standard R16). It builds on `v0.5.0`, draft (16 October 2026), superseding `v0.4.0`: the chain connected on both sides (`decisions/DR-0004`); reading what the TOM release also states (`decisions/DR-0005`); awaiting the human hub's approval (blueprint §13, H-15) |
 | Template | 49GAION AIOC Blueprint Template `v1.5.0` at `e89ed1d`, with the unreleased `v1.6.0` additions on main |
 | Mother | this text, for the Library part 49GAION Process and Position Design, part card `v2` (`DRAFT`, `NOT_RUN`), and Protocol §17, items 1 to 11; merged on 15 October 2026 (`49GAION-protocol` pull requests #33 and #36; `49GAION` pull requests #66 and #68; DR-0014, DR-0018) |
 | Carried rules | from the blueprint of `[ORG]AIOC-TOM` `v0.5.0`, by section (blueprint Annex E) |
 | Fixed test | TEST-PPD v3: cases 1 to 111 (27 struck) and PDL-1 to PDL-6 · `NOT_RUN`; the Library's TEST-PROCESS-AND-POSITION-DESIGN v2 cases are mapped in blueprint §9 |
-| Unit cards | 24 Pod and Cell cards, generated from blueprint §17. `tools/make_cards.py` against `49GAION-protocol` `spec/schemas` on main, 16 October 2026: **0 errors** |
+| Unit cards | 24 Pod and Cell cards, generated from blueprint §17. `tools/make_cards.py` against `49GAION-protocol` `spec/schemas` on main, 19 October 2026: **0 errors** |
 | Bot identity cards | 16, one for each AI Cell; none signs; no shared credential; **0 errors** |
 | Contracts | `contracts/release-notice.schema.json`: 2 valid and 5 must-fail examples; 4 return examples valid against the Library's design return contract at the pinned commit; `tools/check_contracts.py --design-return`, 16 October 2026: **0 failures** |
 | HOAC positions | one, the PPD Design Lead (`[ORG]HOAC-ACS`); more may be added in this AIOC's design (blueprint §17). Who occupies it is top management's own mechanism |

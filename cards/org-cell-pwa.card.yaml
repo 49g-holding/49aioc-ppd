@@ -5,7 +5,7 @@ full_name: PPD Workload Analyst
 parent: '[ORG]POD-PS'
 accountable_to: '[ORG]CELL-PDL'
 type: AI Agent
-card_version: v0.5.0
+card_version: v0.5.1
 version: 0.3.0
 lineage:
   id: '[ORG]CELL-PWA'
